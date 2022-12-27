@@ -13,7 +13,7 @@ body{
 }
 header{
     background-color: #EAC926;
-    height: 20%;
+   
 }
 .container-logo{
   width: 100%;
@@ -37,8 +37,9 @@ header{
 
 .lista{
     margin: 5px;
-    padding: 2px;
+    padding: 3px;
     font-size: 12px;
+    display: none;
 }
 .burger-menu{
  text-align: center;
@@ -54,7 +55,7 @@ header{
 
 main{
     background-color: #ebebeb;
-    width: 100%;
+    width: 90%;
     padding-bottom: 10px;
     margin: auto;
 }
@@ -72,6 +73,7 @@ article{
     
 }
 
+
 .container-img{
     background-color: white;
     text-align: center;
@@ -87,22 +89,24 @@ article{
 .container-des{
     background-color: white;
     border-top: 2px solid #ebebeb;
-    height: 100px;
+    height: 80px;
 
 
     
 }
 
 .circulo {
-    width: 40px;
-    height: 100px;
+   
+    width: 20px;
+    display: flex;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     border: solid 1px #39b54a;
     color: #39b54a;
-    padding: 8px;
-    margin: 15px 0px 150px 15px;  
+    padding: 5px;
+    margin: 0px 0px 0px 15px; 
+ 
 }
 
 .precio{
@@ -111,8 +115,9 @@ article{
 }
 .descuentos{
     font-size: 16px;
-    padding: 10px 0;
+    
     margin-left: 15px; 
+    color: #39b54a;
 }
 .descripciones{
     font-size: 16px;
@@ -142,9 +147,14 @@ footer{
 
 @media (min-width:361px){
     .lista{
-        display: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        
     }
-    
+    .burger-menu{
+        display: none;
+    }  
     article:hover{
    
     transform: translateY(-15px);
@@ -157,6 +167,22 @@ footer{
  }
 
 
+.container-des{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.circulo{
+ margin-top: -15px;
+ align-self: flex-end;
+ margin-right: 15px;
+ background-color: #fff;
+ 
+ }
+ 
+.descuentos{
+    margin-bottom: 5px;
+}
  .descripciones{
     display: block;
  }
