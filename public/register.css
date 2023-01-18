@@ -1,0 +1,518 @@
+/* * REGISTRO */ 
+*{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;  
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #e0e0e0;
+}
+header{
+    background-color: #EAC926;
+    box-sizing: border-box
+}
+.container-logo-barra-titulo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.container-logo{
+    max-width: 50%;
+    min-width: 150px;
+    height: 100px;
+    flex-grow: 1;       
+}
+.logo{
+    width:100%;
+    height: 100px;
+    min-width: 150px;
+    flex-grow: 1;
+}   
+.container-nav{
+    width: 40%;
+    max-width: 100%;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;        
+}
+.buscador{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;   
+}   
+.nav{
+    position: relative;
+    width: 75%;
+    max-width: 100%;
+    min-width: 100px;
+    padding: 3px 3px 3px 1px;
+    border-radius:10px 0px 0px 10px;
+    flex-grow: 0.8;
+    height: 20px;
+    border: 1px white solid;
+}
+#button{          
+    position: absolute;
+    border-radius: 0 10px 10px 0;
+    border: rgb(0, 0, 0); 
+    background-color: #cecece; 
+    cursor: pointer;
+    height: 27.35px;
+    width: 20%;
+    margin: 0;
+    top: 0.5px;
+    right: 0px;
+    padding-left: 1px;
+} 
+#button:active{
+    background-color: rgb(255, 255, 255);
+} 
+#search{
+    font-size: 17px;     
+    cursor: pointer;
+}
+.lista{
+    display: none;       
+}
+.burger-menu{
+    text-align: center;
+}
+#burger{
+    display: none;
+}
+.barras{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 10px; 
+}
+.banner{
+    box-sizing: border-box;
+    width: 100%;
+}
+.main-registro{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#container-registro{
+    width: 60%;
+    height: 80%;
+    background-color: rgba(245, 245, 245, 0.805);
+    color: rgb(2, 2, 2);  
+    border-radius: 15px;
+    margin: auto;
+    align-items: center;
+    justify-items: center;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.67);
+}
+#registro{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#container-perfil{
+    display: flex;
+    flex-direction: column;
+}  
+#div-perfil{
+    display: flex;
+    margin: 10px;
+    justify-content: start;
+}
+.p-perfil{
+    margin-left: 15px;
+    line-height: 0.8em;
+}
+#container-intereses{
+    display: flex;
+    flex-direction: column;
+}
+.div-categorias{
+    display: flex;
+    margin: 10px;
+}
+.p-categorias{
+    margin-left: 15px;
+    line-height: 0.8em;
+}  
+label ,.input, p{
+    margin-bottom: 15px;
+    font-family: "Questrial";
+}
+.input{
+    box-shadow: 0 8px 16px 0  rgb(0 0 0 / 10%);;
+}
+section form h1{
+    color: rgb(48, 47, 47);
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: "Montserrat";
+    /* margin-left: 15px; */
+}
+section form label{
+    color: #000000;
+    font-size: 20px;
+    font-family: "Hanken Grotesk";
+    border-bottom: 1px solid black;
+    font: 400;
+}
+section form  #nombre, #usuario, #email, #nacimiento,#domicilio, #contraseña,#confirmar-contaseña{
+    min-width: 100px;
+    width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px white solid;
+}
+#container-foto{
+    position: relative;
+    height: 20px;
+    width: 70%;
+    border: 2px solid gray;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#p-foto{
+    text-align: center;
+    cursor: pointer;
+}
+#foto{
+    cursor: pointer;
+    position: absolute;
+    height: 20px ;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0;
+}
+
+
+.container-botones{
+    display: flex;
+    width: 100%;
+    padding-bottom: 30px;
+}
+.a-boton{
+    width: 48%;
+}
+.container-botones a .enviar{
+    width: 100%;
+    padding: 5px;
+    background-color: blue;
+    color: #fff;
+    border: 1px solid blue;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+.container-botones  .borrar{
+    width: 48%;
+    padding: 5px;
+    margin-left: 5px;
+    background-color: blue;
+    color: #fff;
+    border: 1px solid blue;
+    cursor: pointer;
+    border-radius: 7px;
+} 
+.container-botones a .enviar:hover{
+    background-color: #0022AA;
+}
+.container-botones  .borrar:hover{
+    background-color: #0022AA;
+}
+
+
+ @media (min-width:480px) {
+    .container-logo-barra-titulo{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .container-logo{
+        max-width: 33%;
+        min-width: 150px;
+        height: 100px;
+        flex-grow: 1;       
+    }
+    .logo{
+        width:100%;
+        height: 100px;
+        min-width: 150px;
+        flex-grow: 1;
+    }   
+    .container-nav{
+        min-width: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    .buscador{
+        position: relative;
+        z-index: 10;
+        width: 90%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;      
+    }
+    .nav{
+        position: relative;
+        width: 76%;
+        max-width: 100%;
+        min-width: 100px; 
+        padding: 3px 3px 3px 1px;
+        border-radius: 10px 0px 0px 10px ;
+        border: 1px solid white;
+        flex-grow: 1;
+        padding-left: 4px;
+    }
+    #button{
+        position: absolute;
+        border-radius: 0px 10px 10px 0px;
+        border: rgb(0, 0, 0); 
+        background-color: #cecece; 
+        cursor: pointer;
+        height: 27.35px;
+        width: 20%;
+        margin: 0;
+        top: 0px;
+        right: 0px;
+        transition: all 100ms;
+    }  
+    #button:active{
+        background-color: rgb(255, 255, 255);
+    }   
+    #search{
+        font-size: 20px;            
+    }
+    .container-titulo{
+        width: 25%;
+        display: flex;
+        justify-content: center;
+    }
+    .titulo{
+        font-size: 13px;
+       flex-grow: 0.4;
+       font-family: "Questrial";
+    }
+    .lista{
+       display: flex;  
+       padding: 10px;      
+       flex-direction: row;
+       font-family: "Questrial";
+       align-items: baseline;
+    }
+    .lista-1{
+        display: flex;
+        width: 40%;  
+        flex-wrap: wrap;
+        justify-content: start;  
+    }
+    .sub-lista-1{
+        display: flex;
+        flex-direction: column;
+    }
+    .lista-2{
+        display: flex;
+        width: 70%;
+        justify-content: end;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+    ul div li{
+        padding: 0px 15px 0px 15px;
+        font-family: "Montserrat";
+        font-size: 10px;
+   }
+    .burger-menu{
+        display: none;
+    }  
+    .banner{
+        box-sizing: border-box;
+        width: 100%;
+    }
+    section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #container-registro{
+        width: 50%;
+        height: 80%;
+        background-color: rgba(245, 245, 245, 0.805);
+        color: rgb(2, 2, 2);  
+        border-radius: 15px;
+        margin: auto;
+        align-items: center;
+        justify-items: center;
+    }
+    #registro{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section form h1{
+        margin-left: 0px;
+        align-self: flex-start;
+    }
+    #container-perfil{
+        display: flex;
+        flex-direction: column;
+    }        
+}
+
+
+@media (min-width:769px){    
+    .container-logo-barra-titulo{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;   
+    }
+    .container-logo{
+        max-width: 33%;
+        min-width: 150px;
+        height: 100px;
+        flex-grow: 1;        
+    }
+    .logo{
+        width:100%;
+        height: 100px;
+        min-width: 150px;
+        flex-grow: 1;
+    }
+    .container-nav{
+        min-width: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    .buscador{
+        position: relative;
+        z-index: 10;
+        width: 90%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+    .nav{
+        position: relative;
+        z-index: 10;
+        width: 80%;
+        max-width: 100%;
+        min-width: 100px; 
+        padding: 3px 3px 3px 1px;
+        border-radius: 10px 0px 0px 10px ;
+        border: 1px solid white;
+        flex-grow: 1;
+        padding-left: 4px;
+    }
+    #button{
+        position: absolute;
+        z-index: 5;
+        border-radius: 0px 10px 10px 0px;
+        border: rgb(0, 0, 0); 
+        background-color: #cecece; 
+        cursor: pointer;
+        height: 27.35px;
+        width: 20%;
+        margin: 0;
+        top: 0px;
+        right: 0px;
+        transition: all 100ms;
+    } 
+    #button:active{
+        background-color: rgb(255, 255, 255);
+    }   
+    #search{
+        font-size: 20px;           
+    }
+    .container-titulo{
+        min-width: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    .titulo{
+        font-size: 15px;
+        flex-grow: 1;
+        font-family: "Questrial";
+    }
+    .lista{
+        display: flex;
+        padding: 10px;      
+        flex-direction: row;
+    }
+    .sub-lista-1{
+        display: flex;
+        flex-direction: row;
+    }
+    .lista-1{
+        display: flex;
+        width: 50%;  
+        flex-wrap: wrap;
+        justify-content: start;
+        flex-direction: row;   
+    }
+    .lista-2{
+        display: flex;
+        width: 50%;
+        justify-content: end;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    ul div li{
+        padding: 0px 15px 0px 15px;
+        font-family: "Montserrat";
+        font-size: 13px;
+    }
+    .li-1{
+        flex-wrap: nowrap;
+    }
+    .burger-menu{
+        display: none;
+    }  
+    section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #container-registro{
+        width: 40%;
+        height: 80%;
+        background-color: rgba(245, 245, 245, 0.805);
+        color: rgb(2, 2, 2);  
+        border-radius: 15px;
+        margin: auto;
+        align-items: center;
+        justify-items: center;
+    }
+    #registro{
+        width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section form h1{
+        margin-left: 0px;
+        align-self: flex-start;
+    }
+    #div-perfil{
+        display: flex;
+        margin: 10px;
+        justify-content: flex-end;
+    }
+    #container-perfil{
+        display: flex;
+        flex-direction: row;
+    } 
+}
