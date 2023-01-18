@@ -1,18 +1,18 @@
-
+/* * REGISTRO */ 
 *{
     text-decoration: none;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0;  
 }
 body{
     height: 100%;
     width: 100%;
-    background-color: #ebebeb;
+    background-color: #e0e0e0;
 }
 header{
     background-color: #EAC926;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 .container-logo-barra-titulo{
     display: flex;
@@ -24,28 +24,28 @@ header{
     max-width: 50%;
     min-width: 150px;
     height: 100px;
-    flex-grow: 1;   
+    flex-grow: 1;       
 }
 .logo{
     width:100%;
     height: 100px;
     min-width: 150px;
     flex-grow: 1;
-}
+}   
 .container-nav{
     width: 40%;
     max-width: 100%;
     min-width: 100px;
     display: flex;
-    justify-content: center;  
+    justify-content: center;        
 }
 .buscador{
     position: relative;
     z-index: 1;
     width: 100%;
     background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-}
+    border-radius: 10px;   
+}   
 .nav{
     position: relative;
     width: 75%;
@@ -61,7 +61,7 @@ header{
     position: absolute;
     border-radius: 0 10px 10px 0;
     border: rgb(0, 0, 0); 
-    background-color: #cecece;
+    background-color: #cecece; 
     cursor: pointer;
     height: 27.35px;
     width: 20%;
@@ -72,17 +72,13 @@ header{
 } 
 #button:active{
     background-color: rgb(255, 255, 255);
-}  
+} 
 #search{
     font-size: 17px;     
     cursor: pointer;
 }
-.titulo{
-    font-family: "Questrial";
-    font-size: 13px;
-}
 .lista{
-    display: none;  
+    display: none;       
 }
 .burger-menu{
     text-align: center;
@@ -102,125 +98,162 @@ header{
     box-sizing: border-box;
     width: 100%;
 }
-main{
-    background-color: #ebebeb;
-    width: 90%;
+.main-registro{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#container-registro{
+    width: 60%;
+    height: 80%;
+    background-color: rgba(245, 245, 245, 0.805);
+    color: rgb(2, 2, 2);  
+    border-radius: 15px;
     margin: auto;
-}   
-h1{ 
-    font-family: "Hanken Grotesk";
-    font-size: 24px;
-    text-align: center;
-    padding: 10px;
-}
-article{
-    margin: auto;
-    width: 100%;
-    min-width: 250px;
-    max-width: 300px;
-    margin-bottom: 50px;  
-    padding: 2px;
-}
-.container-img{
-    background-color: white;
-    text-align: center;
-    object-fit: contain; 
-}
-.img{
-    width: 100%;
-    height:100%;
-    object-fit: contain;
-}
-.container-des{
-    background-color: white;
-    border-top: 2px solid #ebebeb;
-    height: 50px;
-    display: flex;
-    flex-direction: column;    
-}
-.circulo { 
-    width: 20px;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    border: solid 1px #39b54a;
-    color: #39b54a;
-    padding: 5px;
-    position: absolute;
-    margin-top: -15px;
-    align-self: flex-end;
-    margin-right: 15px;
-    background-color: #fff;
-}
-#auto{
-    transition: all 150ms;
-}
-#auto:hover{
-    transform:rotateZ(-90deg);
-}
-.container-precio-descuentos{
-    display: flex;
-    height: 60px;
     align-items: center;
+    justify-items: center;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.67);
 }
-.precio{
-    font-size: 18px;
-    margin-left: 15px; 
-    line-height: 1em;
-    margin-right: 15px;  
-}
-.descuentos{
-    font-size: 16px;
-    margin-left: 15px; 
-    color: #39b54a;
-}
-.descripciones{
-    display: none;    
-}
-footer{
+#registro{
     width: 100%;
-    background-color: #fff;
-}
-.container-footer{
+    margin: auto;
     display: flex;
     flex-direction: column;
- }
- .pie{
-    max-width: 100%;
+    align-items: center;
+}
+#container-perfil{
+    display: flex;
+    flex-direction: column;
+}  
+#div-perfil{
+    display: flex;
+    margin: 10px;
+    justify-content: start;
+}
+.p-perfil{
+    margin-left: 15px;
+    line-height: 0.8em;
+}
+#container-intereses{
+    display: flex;
+    flex-direction: column;
+}
+.div-categorias{
+    display: flex;
+    margin: 10px;
+}
+.p-categorias{
+    margin-left: 15px;
+    line-height: 0.8em;
+}  
+label ,.input, p{
+    margin-bottom: 15px;
+    font-family: "Questrial";
+}
+.input{
+    box-shadow: 0 8px 16px 0  rgb(0 0 0 / 10%);;
+}
+section form h1{
+    color: rgb(48, 47, 47);
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: "Montserrat";
+    /* margin-left: 15px; */
+}
+section form label{
+    color: #000000;
+    font-size: 20px;
+    font-family: "Hanken Grotesk";
+    border-bottom: 1px solid black;
+    font: 400;
+}
+section form  #nombre, #usuario, #email, #nacimiento,#domicilio, #contraseña,#confirmar-contaseña{
+    min-width: 100px;
+    width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px white solid;
+}
+#container-foto{
+    position: relative;
+    height: 20px;
+    width: 70%;
+    border: 2px solid gray;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#p-foto{
     text-align: center;
- }
-.icono{
-    color: blue;
-    font-size: 25px;
-    margin-top: 40px;
+    cursor: pointer;
 }
-.icono:hover{
-    color: #0022AA;
-}
-.descripciones-footer{
-    font-size: 18px;
+#foto{
+    cursor: pointer;
+    position: absolute;
+    height: 20px ;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0;
 }
 
 
-@media (min-width:480px) {
+.container-botones{
+    display: flex;
+    width: 100%;
+    padding-bottom: 30px;
+}
+.a-boton{
+    width: 48%;
+}
+.container-botones a .enviar{
+    width: 100%;
+    padding: 5px;
+    background-color: blue;
+    color: #fff;
+    border: 1px solid blue;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+.container-botones  .borrar{
+    width: 48%;
+    padding: 5px;
+    margin-left: 5px;
+    background-color: blue;
+    color: #fff;
+    border: 1px solid blue;
+    cursor: pointer;
+    border-radius: 7px;
+} 
+.container-botones a .enviar:hover{
+    background-color: #0022AA;
+}
+.container-botones  .borrar:hover{
+    background-color: #0022AA;
+}
+
+
+ @media (min-width:480px) {
     .container-logo-barra-titulo{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        flex-wrap: wrap;   
-       }
+        flex-wrap: wrap;
+    }
     .container-logo{
         max-width: 33%;
         min-width: 150px;
         height: 100px;
         flex-grow: 1;       
-      }
+    }
     .logo{
-          width:100%;
-          height: 100px;
-          min-width: 150px;
-          flex-grow: 1;
-      }   
+        width:100%;
+        height: 100px;
+        min-width: 150px;
+        flex-grow: 1;
+    }   
     .container-nav{
         min-width: 100px;
         display: flex;
@@ -231,7 +264,7 @@ footer{
         z-index: 10;
         width: 90%;
         background-color: rgb(255, 255, 255);
-        border-radius: 10px;  
+        border-radius: 10px;      
     }
     .nav{
         position: relative;
@@ -248,6 +281,7 @@ footer{
         position: absolute;
         border-radius: 0px 10px 10px 0px;
         border: rgb(0, 0, 0); 
+        background-color: #cecece; 
         cursor: pointer;
         height: 27.35px;
         width: 20%;
@@ -255,12 +289,12 @@ footer{
         top: 0px;
         right: 0px;
         transition: all 100ms;
-    } 
+    }  
     #button:active{
-        background-color: rgb(201, 201, 201);
-    }    
+        background-color: rgb(255, 255, 255);
+    }   
     #search{
-        font-size: 20px;         
+        font-size: 20px;            
     }
     .container-titulo{
         width: 25%;
@@ -295,7 +329,6 @@ footer{
         justify-content: end;
         align-items: flex-end;
         flex-wrap: wrap;
-        /* flex-direction:column;    */
     }
     ul div li{
         padding: 0px 15px 0px 15px;
@@ -309,78 +342,50 @@ footer{
         box-sizing: border-box;
         width: 100%;
     }
-    h1{
-        text-align: start;
-    }
-    article{
-        padding: 10px;
-        width: 40%;
-        min-width: 180px;
-        flex-grow: 0.5;  
-        max-width: 250px;
-        padding: 10px;
-    }
-    article:hover{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);   
-    } 
-    .container-des{
-        height: 80px;
-        display: flex;
-        flex-direction: column;
-    }
-    .circulo{
-        margin-top: -15px;
-        align-self: flex-end;
-        margin-right: 15px;
-        background-color: #fff;
-        position: relative;
-    }
-    #auto{
-        transition: all 150ms;
-    }
-    #auto:hover{
-        transform:rotateZ(-90deg);
-    }
-    .descripciones{
-        display: block;
-        font-size: 16px;
-        margin: 0px 0px 10px 10px;
-        display: flex;
-        height: 100%;
-        align-items: flex-end;
-        color: rgb(169, 169, 169);
-        transition: all 250ms;
-        opacity: 0;
-    }
-    .descripciones:hover{
-        opacity: 1;
-    }
     section{
         display: flex;
         flex-wrap: wrap;
     }
-    .container-footer{
+    #container-registro{
+        width: 50%;
+        height: 80%;
+        background-color: rgba(245, 245, 245, 0.805);
+        color: rgb(2, 2, 2);  
+        border-radius: 15px;
+        margin: auto;
+        align-items: center;
+        justify-items: center;
+    }
+    #registro{
+        width: 80%;
+        margin: auto;
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
-    .pie{
-        max-width: 100%;
+    section form h1{
+        margin-left: 0px;
+        align-self: flex-start;
     }
-}  
-  
+    #container-perfil{
+        display: flex;
+        flex-direction: column;
+    }        
+}
+
 
 @media (min-width:769px){    
     .container-logo-barra-titulo{
         display: flex;
         justify-content: space-around;
-        align-items: center; 
-        flex-wrap: wrap;
+        align-items: center;
+        flex-wrap: wrap;   
     }
     .container-logo{
         max-width: 33%;
         min-width: 150px;
         height: 100px;
-        flex-grow: 1;   
+        flex-grow: 1;        
     }
     .logo{
         width:100%;
@@ -417,20 +422,20 @@ footer{
         z-index: 5;
         border-radius: 0px 10px 10px 0px;
         border: rgb(0, 0, 0); 
-        background-color: #cecece;
+        background-color: #cecece; 
         cursor: pointer;
         height: 27.35px;
         width: 20%;
         margin: 0;
         top: 0px;
         right: 0px;
-        transition: all 150ms;
+        transition: all 100ms;
     } 
     #button:active{
         background-color: rgb(255, 255, 255);
-    }    
+    }   
     #search{
-        font-size: 20px;            
+        font-size: 20px;           
     }
     .container-titulo{
         min-width: 100px;
@@ -476,75 +481,38 @@ footer{
     .burger-menu{
         display: none;
     }  
-    h1{
-        text-align: start;
-    }
-    article{
-        width: 20%;
-        min-width: 100px;
-        padding: 5px;
-        max-width: 300px;  
-    }
-    article:hover{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);   
-    }
-    .container-des{
-        height: 80px;
-        display: flex;
-        flex-direction: column; 
-    } 
-    .circulo{
-        margin-top: -15px;
-        align-self: flex-end;
-        margin-right: 15px;
-        background-color: #fff;
-        position: relative;
-    }
-    #auto{
-        transition: all 150ms;
-    }
-    #auto:hover{
-        transform:rotateZ(-90deg);
-    }
-    .descripciones{
-        display: block;
-        font-size: 16px;
-        margin: 0px 0px 10px 10px;
-        display: flex;
-        height: 100%;
-        align-items: flex-end;
-        color: rgb(169, 169, 169);
-        transition: all 250ms;
-        opacity: 0; 
-    }
-    .descripciones:hover{
-        opacity: 1;
-    }
     section{
         display: flex;
         flex-wrap: wrap;
     }
-    .pie{
-        max-width: 30%;
-        flex-grow: 1;
+    #container-registro{
+        width: 40%;
+        height: 80%;
+        background-color: rgba(245, 245, 245, 0.805);
+        color: rgb(2, 2, 2);  
+        border-radius: 15px;
+        margin: auto;
+        align-items: center;
+        justify-items: center;
     }
-    .container-footer{
+    #registro{
+        width: 60%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section form h1{
+        margin-left: 0px;
+        align-self: flex-start;
+    }
+    #div-perfil{
+        display: flex;
+        margin: 10px;
+        justify-content: flex-end;
+    }
+    #container-perfil{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-    }
-    .Copyright{
-        margin-top: 20px ;
-    }
+    } 
 }
-   
-/* 
-@media (max-width:863px){
-    ul div li{
-        padding: 0px 15px 0px 15px;
-        font-family: "Montserrat";
-        font-size: 10px; 
-    }
-} */
-
- 
