@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/b8b6f5bafe.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200&family=Lato:wght@400;700;900&family=Montserrat&family=Oswald&family=Prosto+One&family=Questrial&display=swap" rel="stylesheet">
+
+    <title>Detalle de productos</title>
+</head>
+<body>
+    <% if(Array.isArray(idProducto)){%>
+        <% for(let i = 0; i< idProducto.length; i++){ %>
+           
+            <article>    
+                <div class="container-img">
+                    <img src="<%= idProducto[i].img%>" alt="" class="img">
+              </div> 
+              <div class="container-des"> 
+                    <i class="circulo"><i class="fa-solid fa-truck" id="auto"></i></i>
+                    <div class="container-precio-descuentos">
+                        <p class="precio"><%= idProducto[i].precio%></p>
+                        <p class="descuentos"><%= idProducto[i].descuento%></p>
+                    </div>
+                    <sdtrong class="descripciones"><%= idProducto[i].nombre%></sdtrong>
+              </div>
+        </article>
+
+        <% } %>
+        <% }else{ %>
+       
+                <article>
+                    <div class="container-img">
+                          <img src="<%= idProducto.img%>" alt="" class="img">
+                    </div> 
+                    <div class="container-des"> 
+                          <i class="circulo"><i class="fa-solid fa-truck" id="auto"></i></i>
+                          <div class="container-precio-descuentos">
+                              <p class="precio"><%= idProducto.precio%></p>
+                              <p class="descuentos"><%= idProducto.descuento%></p>
+                          </div>
+                          <strong class="descripciones"><%= idProducto.nombre%></strong>
+                    </div>
+            </article>
+        
+            <% } %>
+            
+
+</body>
+</html>
