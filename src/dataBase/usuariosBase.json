@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "nombre": "jejeje",
+        "usuario": "jejejej",
+        "email": "",
+        "fechaNacimiento": "",
+        "domicilio": "",
+        "foto": "/images/users/usuarios-1679441307543.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "dasd",
+        "usuario": "asdas",
+        "email": "",
+        "fechaNacimiento": "",
+        "domicilio": "",
+        "foto": "/images/users/usuarios-1679441319969.jpeg"
+    },
+    {
+        "id": 3,
+        "nombre": "usuario 3",
+        "usuario": "",
+        "email": "",
+        "fechaNacimiento": "",
+        "domicilio": "",
+        "foto": "/images/users/usuarios-1680389826701.jpg"
+    }
+]

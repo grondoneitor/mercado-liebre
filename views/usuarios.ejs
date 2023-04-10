@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/usuarios.css">
+    <title>usuarios</title>
+</head>
+<body>
+    <%- include("partials/header.ejs")%>
+    <% for(let i = 0; i < users.length; i++ ){%>
+       <a href="/usuarios/<%= users[i].id%>">
+        <div class="container-usuario">
+            <h1 class="h1-usuarios"><%=users[i].nombre %></h1>
+            <h2 class="h2-usuarios"><%=users[i].usuario %></h2>
+            <img src="<%= users[i].foto%>" class="img-usuarios" alt="" width="200" height="200">
+        </div>
+       </a>
+    <%}%>
+  
+</body>
+</html>

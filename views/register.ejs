@@ -18,7 +18,7 @@
   <%- include("partials/header.ejs")%>
     <main class="main-registro">
            <section  id="container-registro">
-              <form action="/register" method="POST" id="registro">
+              <form action="/register" method="POST" id="registro" enctype="multipart/form-data">
                    <h1 id="titulo">Crea tu cuenta</h1>
 
                        <label  class="label" for="nombre" ></label>
@@ -35,7 +35,7 @@
    
 
                        <label class="label" for="nacimiento">Fecha de nacimiento</label>
-                       <input class="input" type="date" name="nacimiento" id="nacimiento">
+                       <input class="input" type="date" name="fechaNacimiento" id="nacimiento">
 
    
 
@@ -45,26 +45,26 @@
    
                        <label class="label" for="perfil">Perfil del usuario</label>      
                        <div id="container-perfil">
-                         <div id="div-perfil" > <input class="input" type="radio" name="perfil" id="perfil"><p class="p-perfil">Comprador</p> </div>
-                         <div id="div-perfil"> <input class="input" type="radio" name="perfil" id="perfil"> <p class="p-perfil">Vendedor</p></div>
+                         <div id="div-perfil" > <input class="input" type="radio" name="perfil-comprador" id="perfil"><p class="p-perfil">Comprador</p> </div>
+                         <div id="div-perfil"> <input class="input" type="radio" name="perfil-vendedor" id="perfil"> <p class="p-perfil">Vendedor</p></div>
                        </div>
 
    
   
                        <label class="label" for="categorias">Intereses </label >
                              <div id="container-intereses"   >
-                                 <div class="div-categorias"><input class="input" type="checkbox" name="categorias" id="categorias" ><p class="p-categorias">Electro</p></div>
-                                 <div class="div-categorias"><input class="input" type="checkbox" name="categorias" id="categorias"><p class="p-categorias">Moda</p></div>
-                                 <div class="div-categorias"><input class="input" type="checkbox" name="categorias" id="categorias"><p class="p-categorias">Hogar</p></div>
-                                 <div class="div-categorias"><input class="input" type="checkbox" name="categorias" id="categorias"><p class="p-categorias">Juguetería</p></div>
-                                 <div class="div-categorias"><input class="input" type="checkbox" name="categorias" id="categorias"><p class="p-categorias">Vida sana</p></div>
+                                 <div class="div-categorias"><input class="input" type="checkbox" name="categorias-electro" id="categorias" ><p class="p-categorias">Electro</p></div>
+                                 <div class="div-categorias"><input class="input" type="checkbox" name="categorias-moda" id="categorias"><p class="p-categorias">Moda</p></div>
+                                 <div class="div-categorias"><input class="input" type="checkbox" name="categorias-hogar" id="categorias"><p class="p-categorias">Hogar</p></div>
+                                 <div class="div-categorias"><input class="input" type="checkbox" name="categorias-jugueteria" id="categorias"><p class="p-categorias">Juguetería</p></div>
+                                 <div class="div-categorias"><input class="input" type="checkbox" name="categorias-vidasana" id="categorias"><p class="p-categorias">Vida sana</p></div>
                              </div>
          
                         
                           <label  class="label label-foto" for="foto">Elige foto de perfil</label>
                           <div id="container-foto">
                             <p id="p-foto">Agregar foto</p>
-                            <input class="input" type="file" name="foto" id="foto" accept="jpg., npg." >
+                            <input class="input" type="file" name="foto" id="foto" accept="jpg., png., jpeg." >
                           </div>
                        
 
@@ -76,12 +76,12 @@
    
 
                         <label class="label" for="confirmar-contaseña">Confirmar contaseña </label>
-                        <input class="input" type="password" name="confirmar-contaseña" id="confirmar-contaseña" placeholder="Confirmar contaseña">
+                        <input class="input" type="password" name="confirmarContraseña" id="confirmar-contaseña" placeholder="Confirmar contaseña">
 
         
                         <div class="container-botones">
-                          <a href="/"  class="a-boton"><button type="button" value="Enviar" class="enviar"> Enviar</button></a>   
-                          <button type="reset" value="Borrar" class="borrar">Borrar</button>
+                          <a href="/"  class="a-boton"><button type="submit" value="Enviar" class="enviar" name="boton-enviar"> Enviar</button></a>   
+                          <button type="reset" value="Borrar" class="borrar" name="boton-borrar">Borrar</button>
                         </div>
    
               </form>

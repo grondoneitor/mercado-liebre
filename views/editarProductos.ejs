@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <main class="">
+        <section  id="">
+           <form action="/editar-producto?_method=PUT" method="POST" id="registro">
+                <h1 id="titulo">Editar producto</h1>
+
+                    <label  class="label" for="nombre" >Nombre del producto:</label>
+                    <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre del producto" value="<%= editarProducto.nombre %>">
+
+                    <input class="input" type="text" name="id" id="id" placeholder="" value="<%= editarProducto.id %>" readonly>
+
+                    <label class="label" for="precio">Precio:</label>
+                    <input class="input" type="text" name="precio" id="precio" placeholder="precio del producto" value="<%= editarProducto.precio %>">
+                       
+                     
+
+
+                    <label class="label" for="caracteristicas">Caracteristicas:</label>
+                    <input class="input" type="text-area" name="caracteristicas" id="caracteristicas" value="<%= editarProducto.caracteristicas %>">
+
+                    <input type="text" name="in-sale" readonly placeholder="producto para vender">
+             
+                    
+                    <label  class="label" for="img">Imagen del producto:</label>
+                    <img  src="<%= editarProducto.img %>" width="200" height="200" class="input" type="file" name="img" id="img" placeholder="imagen del producto" multiple >
+                    <input  class="input" type="file" name="img" id="img" placeholder="imagen del producto" multiple accept="jpg., png., jpeg.">
+
+                    
+                    <button type="submit" value="editar" class="enviar" name="boton-enviar"> Editar producto</button>  
+                
+           </form>
+        </section>
+ </main>
+</body>
+</html>

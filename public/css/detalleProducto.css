@@ -1,17 +1,14 @@
-
 *{
     text-decoration: none;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 body{
     height: 100%;
-    width: 100%;
+    width: 99%;
     background-color: #ebebeb;
-}
-header{
+}header{
     background-color: #EAC926;
     box-sizing: border-box;
 }
@@ -99,36 +96,31 @@ header{
     border-radius: 5px;
     margin: 10px; 
 }
-.banner{
-    box-sizing: border-box;
-    width: 100%;
-}
 main{
-    background-color: #ebebeb;
-    width: 90%;
-    margin: auto;
-}   
-h1{ 
-    font-family: "Hanken Grotesk";
-    font-size: 24px;
-    text-align: center;
-    padding: 10px;
+    height: 100vh;
+    width: 100vw;
 }
-section{
+.container-article{
+    width: 65%;
+    height: 80%;
+    margin: auto;
     display: flex;
+    align-items: center;
 }
-article{
-    margin: auto;
+.article{
+    height: 80%;
     width: 100%;
-    min-width: 250px;
-    max-width: 300px;
-    margin-bottom: 50px;  
-    padding: 2px;
+    display: flex;
+ 
 }
+
 .container-img{
     background-color: white;
-    text-align: center;
+    text-align: start;
     object-fit: contain; 
+    width: 60%;
+    min-width: 250px;
+    height: 100%;
 }
 .img{
     width: 100%;
@@ -137,35 +129,19 @@ article{
 }
 .container-des{
     background-color: white;
-    border-top: 2px solid #ebebeb;
-    height: 50px;
+    /* border-top: 2px solid #ebebeb; */
+    height: 100%;
+    width: 40%;
+    border-left: 1px solid gray;
     display: flex;
     flex-direction: column;    
 }
-.circulo { 
-    width: 20px;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    border: solid 1px #39b54a;
-    color: #39b54a;
-    padding: 5px;
-    position: absolute;
-    margin-top: -15px;
-    align-self: flex-end;
-    margin-right: 15px;
-    background-color: #fff;
-}
-#auto{
-    transition: all 150ms;
-}
-#auto:hover{
-    transform:rotateZ(-90deg);
-}
-.container-precio-descuentos{
+
+.container-precio-descuentos-descripcion{
+    height: 100%;
     display: flex;
-    height: 60px;
-    align-items: center;
+    flex-direction: column;
+    padding: 10px;
 }
 .precio{
     font-size: 18px;
@@ -179,34 +155,19 @@ article{
     color: #39b54a;
 }
 .descripciones{
-    display: none;    
+    display: block;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    margin-left: 15px; 
 }
-footer{
-    width: 100%;
-    background-color: #fff;
-}
-.container-footer{
-    display: flex;
-    flex-direction: column;
- }
- .pie{
-    max-width: 100%;
-    text-align: center;
- }
-.icono{
-    color: blue;
-    font-size: 25px;
-    margin-top: 40px;
-}
-.icono:hover{
-    color: #0022AA;
-}
-.descripciones-footer{
-    font-size: 18px;
+.caracteristicas{
+    font-size: 13px;
+    list-style-type: block;
+    text-decoration: block;
+    margin-left: 15px;
 }
 
-
-@media (min-width:480px) {
+@media (min-width:480px){
     .container-logo-barra-titulo{
         display: flex;
         justify-content: space-around;
@@ -309,30 +270,9 @@ footer{
     .burger-menu{
         display: none;
     }  
-    .banner{
-        box-sizing: border-box;
-        width: 100%;
-    }
-    h1{
-        text-align: start;
-    }
-    article{
-        padding: 10px;
-        width: 40%;
-        min-width: 180px;
-        flex-grow: 0.5;  
-        max-width: 250px;
-        padding: 10px;
-    }
-    article:hover{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);   
-    } 
-    .container-des{
-        height: 80px;
-        display: flex;
-        flex-direction: column;
-    }
-    .circulo{
+ 
+
+     .circulo{
         margin-top: -15px;
         align-self: flex-end;
         margin-right: 15px;
@@ -344,36 +284,25 @@ footer{
     }
     #auto:hover{
         transform:rotateZ(-90deg);
-    }
-    .descripciones{
+    } 
+     .descripciones{
         display: block;
         font-size: 16px;
-        margin: 0px 0px 10px 10px;
-        display: flex;
-        height: 100%;
-        align-items: flex-end;
-        color: rgb(169, 169, 169);
-        transition: all 250ms;
-        opacity: 0;
+        /* margin: 0px 0px 10px 10px; */
+        /* display: flex; */
+        /* height: 100%; */
+        /* align-items: flex-end; */
+        color: rgb(0, 0, 0);
+        /* transition: all 250ms;
+        opacity: 0; */
     }
-    .descripciones:hover{
+    /* .descripciones:hover{
         opacity: 1;
-    }
-    section{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .container-footer{
-        display: flex;
-        flex-direction: column;
-    }
-    .pie{
-        max-width: 100%;
-    }
-}  
-  
+    } */
 
-@media (min-width:769px){    
+} 
+
+/* @media (min-width:769px){
     .container-logo-barra-titulo{
         display: flex;
         justify-content: space-around;
@@ -479,25 +408,13 @@ footer{
     }
     .burger-menu{
         display: none;
-    }  
-    h1{
-        text-align: start;
-    }
-    article{
-        width: 20%;
-        min-width: 100px;
-        padding: 5px;
-        max-width: 300px;  
-    }
-    article:hover{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);   
-    }
+    } 
     .container-des{
         height: 80px;
         display: flex;
-        flex-direction: column; 
-    } 
-    .circulo{
+        flex-direction: column;  */
+   /* } 
+     .circulo{
         margin-top: -15px;
         align-self: flex-end;
         margin-right: 15px;
@@ -509,8 +426,8 @@ footer{
     }
     #auto:hover{
         transform:rotateZ(-90deg);
-    }
-    .descripciones{
+    } */
+    /* .descripciones{
         display: block;
         font-size: 16px;
         margin: 0px 0px 10px 10px;
@@ -523,32 +440,6 @@ footer{
     }
     .descripciones:hover{
         opacity: 1;
-    }
-    section{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .pie{
-        max-width: 30%;
-        flex-grow: 1;
-    }
-    .container-footer{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    .Copyright{
-        margin-top: 20px ;
-    }
-}
-   
-/* 
-@media (max-width:863px){
-    ul div li{
-        padding: 0px 15px 0px 15px;
-        font-family: "Montserrat";
-        font-size: 10px; 
-    }
-} */
+    } 
 
- 
+}*/

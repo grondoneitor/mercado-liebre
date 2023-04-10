@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main class="">
+        <section  id="">
+           <form action="/vender" method="POST" id="registro" enctype="multipart/form-data">
+                <h1 id="titulo">Vende!!!</h1>
+
+                    <label  class="label" for="nombre" >Nombre del producto:</label>
+                    <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre del producto">
+
+
+                    <label class="label" for="precio">Precio:</label>
+                    <input class="input" type="text" name="precio" id="precio" placeholder="precio del producto">
+
+                    <label class="label" for="descuento">Descuento:</label>
+                    <input class="input" type="text" name="descuento" id="descuento" placeholder="si quieres ofrecer descuento">
+
+                    <label  class="label" for="img">Imagen del producto:</label>
+                    <input  class="input" type="file" name="img" id="img" placeholder="imagen del producto" multiple accept="jpg., png., jpeg.">
+   
+                     
+
+
+                    <label class="label" for="caracteristicas">Caracteristicas:</label>
+                    <input class="input" type="text-area" name="caracteristicas" id="caracteristicas">
+
+                    <input type="text" name="in-sale" readonly placeholder="producto para vender">
+
+                    <a href="/"  class="a-boton"><button type="submit" value="Enviar" class="enviar" name="boton-enviar"> Poner en venta</button></a>   
+            
+
+           </form>
+        </section>
+ </main>
+</body>
+</html>

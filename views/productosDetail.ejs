@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/detalleProducto.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     rel="stylesheet" />
     <script src="https://kit.fontawesome.com/b8b6f5bafe.js" crossorigin="anonymous"></script>
@@ -15,42 +15,77 @@
     <title>Detalle de productos</title>
 </head>
 <body>
-    <% if(Array.isArray(idProducto)){%>
-        <% for(let i = 0; i< idProducto.length; i++){ %>
-           
-            <article>    
-                <div class="container-img">
-                    <img src="<%= idProducto[i].img%>" alt="" class="img">
-              </div> 
-              <div class="container-des"> 
-                    <i class="circulo"><i class="fa-solid fa-truck" id="auto"></i></i>
-                    <div class="container-precio-descuentos">
-                        <p class="precio"><%= idProducto[i].precio%></p>
-                        <p class="descuentos"><%= idProducto[i].descuento%></p>
-                    </div>
-                    <sdtrong class="descripciones"><%= idProducto[i].nombre%></sdtrong>
-              </div>
-        </article>
-
-        <% } %>
+    
+        <%- include("partials/header.ejs")%>
+    
+<main>
+    <% if(Array.isArray(producto)){%>
+        <% for(let i = 0; i < producto.length; i++ ){%>
+        <section class="container-article hola-2">
+            <article class="article">
+            <div class="container-img">
+                  <img src="<%= producto[i].img%>" alt="" class="img" name="">
+            </div> 
+            <div class="container-des"> 
+                  <!-- <i class="circulo"><i class="fa-solid fa-truck" id="auto"></i></i> -->
+                  <div class="container-precio-descuentos-descripcion">
+                      <strong class="descripciones"><%= producto[i].nombre%></strong> 
+                      <p class="precio"><%= producto[i].precio%></p>
+                      <p class="descuentos"><%= producto[i].descuento%></p> 
+                      <ul>
+                        <% for(let o = 0; o < producto[i].caracteristicas.length; o++){%>  
+                        <li class="caracteristicas"><%= producto[i].caracteristicas[o] %></li>
+                        <% } %>
+                       </ul>        
+                                 
+                  </div>
+                  <div class="container-botones">
+                    
+                        <input type="submit" value="comprar" name="boton-compra">
+                        <a href="/editar-producto/<%= producto.id%>"><input type="submit" value="editar producto" name="boton-editar"></a>
+                    
+                  </div>
+                 
+                  
+            </div>
+           </article>
+       </section>
+       <% } %>
         <% }else{ %>
        
-                <article>
+               <section class="container-article hola-2">
+                    <article class="article">
                     <div class="container-img">
-                          <img src="<%= idProducto.img%>" alt="" class="img">
+                          <img src="<%= producto.img%>" alt="" class="img">
                     </div> 
                     <div class="container-des"> 
-                          <i class="circulo"><i class="fa-solid fa-truck" id="auto"></i></i>
-                          <div class="container-precio-descuentos">
-                              <p class="precio"><%= idProducto.precio%></p>
-                              <p class="descuentos"><%= idProducto.descuento%></p>
+                          <!-- <i class="circulo"><i class="fa-solid fa-truck" id="auto"></i></i> -->
+                          <div class="container-precio-descuentos-descripcion">
+                              <strong class="descripciones"><%= producto.nombre%></strong> 
+                              <p class="precio"><%= producto.precio%></p>
+                              <p class="descuentos"><%= producto.descuento%></p> 
+                              <ul>
+                                <% for(let o = 0; o < producto.caracteristicas.length; o++){%>  
+                                <li class="caracteristicas"><%= producto.caracteristicas[o] %></li>
+                                <% } %>
+                               </ul>        
+                                         
                           </div>
-                          <strong class="descripciones"><%= idProducto.nombre%></strong>
+                          <div class="container-botones">
+                           
+                                <input type="submit" value="comprar" name="boton-compra">
+                                
+                                <a href="/editar-producto/<%= producto.id%>"><input type="submit" value="editar producto" name="boton-editar"></a>
+                      
+                          </div>
+                         
+                          
                     </div>
-            </article>
+                   </article>
+               </section>
         
             <% } %>
-            
+        </main>           
 
 </body>
 </html>

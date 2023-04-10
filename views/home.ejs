@@ -23,51 +23,33 @@
     </section>
 
 <main>
+    
+
+    
     <h1 class="">Basado en tu última visita</h1>
-        <section>
-             <% for(let i = 0; i  < allProductos.length; i++ ){%>      
-               
+ 
+        <% for(let i = 0; i  < productos.length; i++ ){%>
+            <section class="section-producto">
                 <article>
-                    <a href="/producto/<%= allProductos[i].id%> ">
+
+                    <a href="/producto/<%= productos[i].id%> ">
                     <div class="container-img">
-                          <img src="<%= allProductos[i].img%>" alt="" class="img">
+                          <img src="<%= productos[i].img%>" alt="" class="img">
                     </div> 
                     <div class="container-des"> 
                           <i class="circulo"><i class="fa-solid fa-truck" id="auto"></i></i>
                           <div class="container-precio-descuentos">
-                              <p class="precio"><%= allProductos[i].precio%></p>
-                              <p class="descuentos"><%= allProductos[i].descuento%></p>
+                              <p class="precio"><%= productos[i].precio%></p>
+                              <p class="descuentos"><%= productos[i].descuento%></p>
                           </div>
-                          <strong class="descripciones"><%= allProductos[i].nombre%></strong>
+                          <strong class="descripciones"><%= productos[i].nombre%></strong>
                     </div>
-                </a>
-            </article>
-              
-            
-
-            <%  } %>
-        </section>
-
-    <h1 class="">Seccion de ofertas</h1>
-        <section>
-            <% for(let i = 0; i  < allProductos.length; i++ ){%>
-                <article>
-                    <a href="/producto/<%= allProductos[i].id%> ">
-                        <div class="container-img">
-                              <img src="<%= allProductos[i].img%>" alt="cafetera" class="img">
-                        </div> 
-                        <div class="container-des"> 
-                              <i class="circulo"><i class="fa-solid fa-truck" id="auto"></i></i>
-                              <div class="container-precio-descuentos">
-                                  <p class="precio"><%= allProductos[i].precio%></p>
-                                  <p class="descuentos"><%= allProductos[i].descuento%></p>
-                              </div>
-                              <strong class="descripciones"><%= allProductos[i].nombre%></strong>
-                        </div>
                     </a>
                 </article>
-           <%  } %>
+                    
         </section>
+            <% }%> 
+      
 
 </main>
 

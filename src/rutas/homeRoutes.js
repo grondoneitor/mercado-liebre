@@ -2,9 +2,9 @@ const express = require("express")
 
 const homeRouter = express.Router()
 
-const { home,  productosDetail} = require("../controllers/homeController")
+const { home, buscandoProducto} = require("../controllers/homeController")
 
 homeRouter.get("/", home)
-homeRouter.get("/producto/:id", productosDetail)
+homeRouter.get("/buscar", buscandoProducto)
 
 module.exports = homeRouter

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/usuarios.css">
+    
+    <title>usuarios</title>
+</head>
+<body>
+    <%- include("partials/header.ejs")%>
+    <% if(Array.isArray(user)){%>
+    <% for(let i = 0; i < user.length; i++ ){%>
+      <div class="container-usuario">
+        <img src="<%= user[i].foto%>" alt="" width="200" height="200">
+        <h1 class="h1-usuarios"><%=user[i].nombre %></h1>
+        <h2 class="h2-usuarios"><%=user[i].usuario %></h2>
+        <a href="/editar-usuario/<%= user[i].id%>"> <button type="submit" value="editar" class="enviar" name="boton-enviar"> Editar usuario</button></a>
+      </div>
+    <%}}else{%>
+      <div class="container-usuario">
+        <img src="<%= user.foto%>" alt="" width="200" height="200">
+        <h1 class="h1-usuarios"><%=user.nombre %></h1>
+        <h2 class="h2-usuarios"><%=user.usuario %></h2>
+        <a href="/editar-usuario/<%= user.id%>"> <button type="submit" value="editar" class="enviar" name="boton-enviar"> Editar usuario</button></a>
+      </div>
+      <%}%>
+</body>
+</html>

@@ -1,22 +1,20 @@
 const path = require("path")
-const productos = require("../dataBase/productosBase")
+const productos = require("../dataBase/productosBase.json")
 
 const home = (req, res) =>{
-   res.render(path.join(__dirname, "../../views/home.ejs"),{"allProductos": productos})
-}
-const productosDetail = (req, res) =>{
-   const { id }= req.params
-   const idProducto = productos.find(e => e.id === parseInt(id))
-  if(idProducto){
-    res.render(path.join(__dirname,"../../views/productosDetail.ejs"), {idProducto})
-  }else{
-
-    res.send("not found 404")
-  }
+  const productos = require("../dataBase/productosBase.json")
+   res.render(path.join(__dirname, "../../views/home.ejs"),{productos})
 }
 
+
+const buscandoProducto = (req, res) =>{
+ const { nombre } = req.query;
+ const producto = productos.filter(e => e.nombre.toUpperCase().includes(nombre.toUpperCase()));
+ producto.length !=0 ? res.render(path.join(__dirname,"../../views/partials/productosDetail.ejs"), {producto}) : res.status(404);
+
+}
  
 module.exports  = {
    home,
-   productosDetail
+   buscandoProducto
 }
