@@ -1,8 +1,8 @@
 module.exports = {
     "development": {
       "username": "root",
-      "password": null,
-      "database": "database_development",
+      "password": "",
+      "database": "mercado_liebre", // aca tengo que cambiar por el nombre de mi base de datos
       "host": "127.0.0.1",
       "dialect": "mysql"
     },

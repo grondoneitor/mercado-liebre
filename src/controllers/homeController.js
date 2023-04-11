@@ -1,10 +1,10 @@
 const path = require("path")
 const productos = require("../dataBase/productosBase.json")
 
-const home = (req, res) =>{
-  const productos = require("../dataBase/productosBase.json")
-   res.render(path.join(__dirname, "../../views/home.ejs"),{productos})
-}
+// const home = (req, res) =>{
+//   const productos = require("../dataBase/productosBase.json")
+//    res.render(path.join(__dirname, "../../views/home.ejs"),{productos})
+// }
 
 
 const buscandoProducto = (req, res) =>{
@@ -15,6 +15,6 @@ const buscandoProducto = (req, res) =>{
 }
  
 module.exports  = {
-   home,
+   // home,
    buscandoProducto
 }

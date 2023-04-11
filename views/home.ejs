@@ -27,28 +27,30 @@
 
     
     <h1 class="">Basado en tu última visita</h1>
- 
-        <% for(let i = 0; i  < productos.length; i++ ){%>
-            <section class="section-producto">
-                <article>
+     
 
-                    <a href="/producto/<%= productos[i].id%> ">
-                    <div class="container-img">
-                          <img src="<%= productos[i].img%>" alt="" class="img">
-                    </div> 
-                    <div class="container-des"> 
-                          <i class="circulo"><i class="fa-solid fa-truck" id="auto"></i></i>
-                          <div class="container-precio-descuentos">
-                              <p class="precio"><%= productos[i].precio%></p>
-                              <p class="descuentos"><%= productos[i].descuento%></p>
-                          </div>
-                          <strong class="descripciones"><%= productos[i].nombre%></strong>
-                    </div>
-                    </a>
-                </article>
-                    
-        </section>
-            <% }%> 
+
+    <% for(let i = 0; i  < productos.length; i++ ){%>
+        <section class="section-producto">
+            <article>
+
+                <a href="/producto/<%= productos[i].id%> ">
+                <div class="container-img">
+                      <img src="<%= productos[i].product_img%>" alt="" class="img">
+                </div> 
+                <div class="container-des"> 
+                      <i class="circulo"><i class="fa-solid fa-truck" id="auto"></i></i>
+                      <div class="container-precio-descuentos">
+                          <p class="precio"><%= productos[i].product_name%></p>
+                          <p class="descuentos"><%= productos[i].product_category%></p>
+                      </div>
+                      <strong class="descripciones"><%= productos[i].product_description%></strong>
+                </div>
+                </a>
+            </article>
+                
+    </section>
+        <% }%> 
       
 
 </main>

@@ -26,8 +26,10 @@ fs
       file.indexOf('.test.js') === -1
     );
   })
-  .forEach(file => {
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
+  .forEach((file) => {
+    console.log(file)
+    // const models =  require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes); 
+    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes)//(sequelize, Sequelize.DataTypes) : con esto me tira error
     db[model.name] = model;
   });
 
@@ -41,3 +43,4 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
+

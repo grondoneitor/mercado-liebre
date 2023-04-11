@@ -1,7 +1,7 @@
 const path = require("path")
 const fs = require("fs")
 let productos = require("../dataBase/productosBase.json")
-
+const db = require("../dataBase/models")
 
 const venderProducto = (req, res )=> {
     res.render(path.join(__dirname, "../../views/venderProducto.ejs"))
@@ -91,6 +91,20 @@ const editarProducto =(req, res )=> {
       res.send("Producto no encontrado");
     }
   };
+
+  const productoDeDB = (req, res )=>{
+  //  console.log(db.findAll())
+  db.Producto.findAll()
+  .then((productos) => {
+    res.render("home", {productos: productos})       
+  })
+  .catch((error)=>{
+    console.log(error);
+    res.send(error)
+  })
+
+          
+  }
   
 
 module.exports = {
@@ -99,7 +113,8 @@ module.exports = {
     // homeProductos,
     editarProducto,
     productoEditado,
-    productosDetail
+    productosDetail,
+    productoDeDB
     // 
 }
 

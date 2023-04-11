@@ -2,7 +2,7 @@ const express = require("express")
 const productoRouter = express.Router()
 const path = require("path")
 const multer = require("multer")
-const {venderProducto, postNuevoProducto,  productoEditado, editarProducto, productosDetail} = require("../controllers/productoController")
+const {venderProducto, postNuevoProducto,  productoEditado, editarProducto, productosDetail, productoDeDB} = require("../controllers/productoController")
 
 const storage = multer.diskStorage({
     destination:(req, file, cb)=>{
@@ -26,5 +26,8 @@ productoRouter.get("/producto/:id",upload.single("img"),productosDetail)
 productoRouter.get("/editar-producto/:id", upload.single("img"),editarProducto)
 productoRouter.put("/editar-producto",upload.single("img"),productoEditado)
 
+productoRouter.get("/",productoDeDB)
 module.exports = productoRouter
+
+
   
