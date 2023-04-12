@@ -21,12 +21,15 @@
               <form action="/register" method="POST" id="registro" enctype="multipart/form-data">
                    <h1 id="titulo">Crea tu cuenta</h1>
 
-                       <label  class="label" for="nombre" ></label>
-                       <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
+                       <label  class="label" for="name" ></label>
+                       <input class="input" type="text" name="name" id="name" placeholder="Name">
 
    
-                       <label class="label" for="usuario"></label>
-                       <input class="input" type="text" name="usuario" id="usuario" placeholder="Nombre de Usuario">
+                       <label class="label" for="last_name"></label>
+                       <input class="input" type="text" name="last_name" id="last_name" placeholder="Last Name"> 
+
+                       <label class="label" for="name_user"></label>
+                       <input class="input" type="text" name="name_user" id="name_user" placeholder="Name of user">
 
    
                        <label  class="label" for="email"></label>
@@ -34,24 +37,24 @@
 
    
 
-                       <label class="label" for="nacimiento">Fecha de nacimiento</label>
-                       <input class="input" type="date" name="fechaNacimiento" id="nacimiento">
+                       <label class="label" for="date_of_birth">Date of birth</label>
+                       <input class="input" type="date" name="date_of_birth" id="date_of_birth">
 
    
 
-                       <label class="label" for="domicilio"></label>
-                       <input  class="input" type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
+                       <label class="label" for="home"></label>
+                       <input  class="input" type="text" name="home" id="home" placeholder="Home">
 
    
-                       <label class="label" for="perfil">Perfil del usuario</label>      
+                       <!-- <label class="label" for="perfil">Perfil del usuario</label>      
                        <div id="container-perfil">
                          <div id="div-perfil" > <input class="input" type="radio" name="perfil-comprador" id="perfil"><p class="p-perfil">Comprador</p> </div>
                          <div id="div-perfil"> <input class="input" type="radio" name="perfil-vendedor" id="perfil"> <p class="p-perfil">Vendedor</p></div>
-                       </div>
+                       </div> -->
 
    
   
-                       <label class="label" for="categorias">Intereses </label >
+                       <!-- <label class="label" for="categorias">Intereses </label >
                              <div id="container-intereses"   >
                                  <div class="div-categorias"><input class="input" type="checkbox" name="categorias-electro" id="categorias" ><p class="p-categorias">Electro</p></div>
                                  <div class="div-categorias"><input class="input" type="checkbox" name="categorias-moda" id="categorias"><p class="p-categorias">Moda</p></div>
@@ -59,7 +62,7 @@
                                  <div class="div-categorias"><input class="input" type="checkbox" name="categorias-jugueteria" id="categorias"><p class="p-categorias">Juguetería</p></div>
                                  <div class="div-categorias"><input class="input" type="checkbox" name="categorias-vidasana" id="categorias"><p class="p-categorias">Vida sana</p></div>
                              </div>
-         
+          -->
                         
                           <label  class="label label-foto" for="foto">Elige foto de perfil</label>
                           <div id="container-foto">
@@ -70,18 +73,15 @@
 
    
 
-                        <label class="label" for="contraseña">Contraseña</label>
-                        <input class="input" type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-
-   
-
-                        <label class="label" for="confirmar-contaseña">Confirmar contaseña </label>
-                        <input class="input" type="password" name="confirmarContraseña" id="confirmar-contaseña" placeholder="Confirmar contaseña">
+                        <label class="label" for="password">Password</label>
+                        <input class="input" type="password" name="password" id="password" placeholder="Password">
+                        <label class="label" for="confirm_password">Confirm password </label>
+                        <input class="input" type="password" name="confirm_password" id="confirm_password" placeholder="Confirm password">
 
         
                         <div class="container-botones">
-                          <a href="/"  class="a-boton"><button type="submit" value="Enviar" class="enviar" name="boton-enviar"> Enviar</button></a>   
-                          <button type="reset" value="Borrar" class="borrar" name="boton-borrar">Borrar</button>
+                          <a href="/"  class="a-boton"><button type="submit" value="Enviar" class="enviar" name="boton-enviar"> Submit</button></a>   
+                          <button type="reset" value="Borrar" class="borrar" name="boton-borrar">Delete</button>
                         </div>
    
               </form>

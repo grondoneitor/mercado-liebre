@@ -11,71 +11,71 @@
         <section  id="container-registro">
          
 
-           <form action="/editar-usuario?_method=PUT" method="POST" id="registro" enctype="multipart/form-data">
-                <h1 id="titulo">Crea tu cuenta</h1>
-
-                    <label  class="label" for="nombre" ></label>
-                    <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" value="<%= userEdit ? userEdit.nombre : '' %>">
-
-
-                    <label class="label" for="usuario"></label>
-                    <input class="input" type="text" name="usuario" id="usuario" placeholder="Nombre de Usuario"  value="<%= userEdit ? userEdit.usuario : '' %>">
+           <form action="/editar-usuario/<%=userEdit.id %>" method="POST" id="registro" >
+                <h1 id="titulo">Edita el usuario</h1>
+                <label  class="label" for="name" ></label>
+                <input class="input" type="text" name="name" id="name" placeholder="Name" value="<%=userEdit.name %>">
 
 
-                    <label  class="label" for="email"></label>
-                    <input  class="input" type="email" name="email" id="email" placeholder="E-mail"  value="<%= userEdit ? userEdit.email : '' %>">
+                <label class="label" for="last_name"></label>
+                <input class="input" type="text" name="last_name" id="last_name" placeholder="Last Name" value="<%=userEdit.last_name %>"> 
+
+                <label class="label" for="name_user"></label>
+                <input class="input" type="text" name="name_user" id="name_user" placeholder="Name of user" value="<%=userEdit.name_user %>">
 
 
-
-                    <label class="label" for="nacimiento">Fecha de nacimiento</label>
-                    <input class="input" type="date" name="fechaNacimiento" id="nacimiento" value="<%=  userEdit ? userEdit.fechaNacimiento : '' %>">
+                <label  class="label" for="email"></label>
+                <input  class="input" type="email" name="email" id="email" placeholder="E-mail" value="<%=userEdit.email %>">
 
 
 
-                    <label class="label" for="domicilio"></label>
-                    <input  class="input" type="text" name="domicilio" id="domicilio" placeholder="Domicilio" value=" <%= userEdit ? userEdit.domicilio : '' %>">
-
-
-                    <label class="label" for="perfil">Perfil del usuario</label>      
-                    <div id="container-perfil">
-                      <div id="div-perfil" > <input class="input" type="radio" name="perfil-comprador" id="perfil" value=""><p class="p-perfil">Comprador</p> </div>
-                      <div id="div-perfil"> <input class="input" type="radio" name="perfil-vendedor" id="perfil" value=""> <p class="p-perfil">Vendedor</p></div>
-                    </div>
+                <label class="label" for="date_of_birth">Date of birth</label>
+                <input class="input" type="date" name="date_of_birth" id="date_of_birth" value="<%=userEdit.date_of_birth %>">
 
 
 
-                    <label class="label" for="categorias">Intereses </label >
-                          <div id="container-intereses"   >
-                              <div class="div-categorias"><input class="input" type="checkbox" name="categorias-electro" id="categorias" value=""><p class="p-categorias">Electro</p></div>
-                              <div class="div-categorias"><input class="input" type="checkbox" name="categorias-moda" id="categorias" value=""><p class="p-categorias">Moda</p></div>
-                              <div class="div-categorias"><input class="input" type="checkbox" name="categorias-hogar" id="categorias" value=""><p class="p-categorias">Hogar</p></div>
-                              <div class="div-categorias"><input class="input" type="checkbox" name="categorias-jugueteria" id="categorias" value=""><p class="p-categorias">Juguetería</p></div>
-                              <div class="div-categorias"><input class="input" type="checkbox" name="categorias-vidasana" id="categorias" value=""><p class="p-categorias">Vida sana</p></div>
-                          </div>
-      
-                     
-                       <label  class="label label-foto" for="foto">Elige foto de perfil</label>
-                       <div id="container-foto">
-                         <p id="p-foto">Agregar foto</p>
-                         <input class="input" type="file" name="foto" id="foto" accept="jpg., png., jpeg." value="<%= userEdit ? userEdit.foto : '' %>">
-                       </div>
-                    
+                <label class="label" for="home"></label>
+                <input  class="input" type="text" name="home" id="home" placeholder="Home" value="<%=userEdit.home %>">
+
+
+                <!-- <label class="label" for="perfil">Perfil del usuario</label>      
+                <div id="container-perfil">
+                  <div id="div-perfil" > <input class="input" type="radio" name="perfil-comprador" id="perfil"><p class="p-perfil">Comprador</p> </div>
+                  <div id="div-perfil"> <input class="input" type="radio" name="perfil-vendedor" id="perfil"> <p class="p-perfil">Vendedor</p></div>
+                </div> -->
 
 
 
-                     <label class="label" for="contraseña">Contraseña</label>
-                     <input class="input" type="password" name="contraseña" id="contraseña" placeholder="Contraseña" value="">
+                <!-- <label class="label" for="categorias">Intereses </label >
+                      <div id="container-intereses"   >
+                          <div class="div-categorias"><input class="input" type="checkbox" name="categorias-electro" id="categorias" ><p class="p-categorias">Electro</p></div>
+                          <div class="div-categorias"><input class="input" type="checkbox" name="categorias-moda" id="categorias"><p class="p-categorias">Moda</p></div>
+                          <div class="div-categorias"><input class="input" type="checkbox" name="categorias-hogar" id="categorias"><p class="p-categorias">Hogar</p></div>
+                          <div class="div-categorias"><input class="input" type="checkbox" name="categorias-jugueteria" id="categorias"><p class="p-categorias">Juguetería</p></div>
+                          <div class="div-categorias"><input class="input" type="checkbox" name="categorias-vidasana" id="categorias"><p class="p-categorias">Vida sana</p></div>
+                      </div>
+   -->
+                 
+                   <label  class="label label-foto" for="foto">Elige foto de perfil</label>
+                   <div id="container-foto">
+                     <p id="p-foto">Agregar foto</p>
+                     <input class="input" type="file" name="foto" id="foto" accept="jpg., png., jpeg." >
+                   </div>
+                
 
 
 
-                     <label class="label" for="confirmar-contaseña">Confirmar contaseña </label>
-                     <input class="input" type="password" name="confirmarContraseña" id="confirmar-contaseña" placeholder="Confirmar contaseña">
+                 <label class="label" for="password">Password</label>
+                 <input class="input" type="password" name="password" id="password" placeholder="Password" value="<%=userEdit.password %>">
+                 <label class="label" for="confirm_password">Confirm password </label>
+                 <input class="input" type="password" name="confirm_password" id="confirm_password" placeholder="Confirm password" value="<%=userEdit.confirm_password %>"> 
 
-     
-                     <div class="container-botones">
-                       <a href="/"  class="a-boton"><button type="submit" value="Enviar" class="enviar" name="boton-enviar"> Enviar</button></a>   
-                       <button type="reset" value="Borrar" class="borrar" name="boton-borrar">Borrar</button>
-                     </div>
+ 
+                 <div class="container-botones">
+                   <a href="/"  class="a-boton"><button type="submit" value="Enviar" class="enviar" name="boton-enviar"> Submit</button></a>   
+                   <button type="reset" value="Borrar" class="borrar" name="boton-borrar">Delete</button>
+                 </div>
+
 
            </form>
         </section>

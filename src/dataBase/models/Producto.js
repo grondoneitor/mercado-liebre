@@ -1,39 +1,3 @@
-// let { DataTypes } = require("sequelize")
-
-
-// const db = require("./index")
-// const crearProducto = (sequelize, DataTypes) => {
-  
-//      const Producto = sequelize.define("Producto",{ // "Producto": nombre de mi JS hace referencia a la tabla de productos de mi base de datos
-//         id:{
-//             type: DataTypes.INTEGER, 
-//             primaryKey: true, 
-//             auto_increment: true
-//         }, 
-//         product_name:{
-//             type: DataTypes.INTEGER
-//         } ,
-//         product_category:{
-//             type: DataTypes.INTEGER
-//         } ,
-//         product_img:{
-//             type: DataTypes.INTEGER
-//         } ,
-//         product_description:{
-//             type: DataTypes.INTEGER
-//         } 
-//      }, // el modelo de mi tabla: aca pongo las columnas de DB con los mismo nombres, definiendo sus tipo de datos-
-//      {
-//         tableName: "productos", // aca configuro como se llama mi tabla de productos en mi DB
-//         timesstamps: false
-//      }
-//      )
-    
-    
-    
-//      return Producto
-// }
-
 module.exports = (sequelize, DataTypes) => {
     const Producto = sequelize.define("Producto",{ // "Producto": nombre de mi JS hace referencia a la tabla de productos de mi base de datos
         id:{

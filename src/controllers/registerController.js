@@ -1,76 +1,78 @@
 const path = require("path")
 const fs = require("fs")
 const users = require("../dataBase/usuariosBase.json")
+const db = require("../dataBase/models")
 
-const registerController = function(req,res){
-      res.render(path.join(__dirname, "../../views/register.ejs"))
+
+   const registerController = function(req,res){
+
+          res.render(path.join(__dirname, "../../views/register.ejs"))
+      
    }
 
    const usuarios = function(req,res){
- 
-         res.render(path.join(__dirname,"../../views/usuarios.ejs"), {users})
+      db.User.findAll()
+      .then((users)=> {
+   
+         res.render(path.join(__dirname,"../../views/usuarios.ejs"), {users}) 
+      })
     
-      
       // res.render(path.join(__dirname, "../../views/usuarios.ejs"), ({"users": nuevoUsers}))
    }
+
+
    const detalleUsuario = function(req,res){
-      const {id} = req.params;
-      const user = users.filter(e => e.id === parseInt(id))
-      if(user){
-         res.render(path.join(__dirname,"../../views/detalleUsuario.ejs"), {user})
-       }else{
-     
-         res.send("not found 404")
-       }
-      
-      // res.render(path.join(__dirname, "../../views/usuarios.ejs"), ({"users": nuevoUsers}))
+    db.User.findByPk(req.params.id)
+       .then((users)=>{
+         res.render(path.join(__dirname,"../../views/detalleUsuario.ejs"), {users})
+       })
+       .catch((error)=>{
+        res.status(error)
+       })
+
    }
    const postNuevoUsuario = function(req,res){
-      const {
-         nombre,
-         usuario,
-         email,
-         fechaNacimiento,
-         domicilio,       
-         contraseña,
-         confirmarContraseña,
-      } = req.body
-   //  const newId = users[users.length - 1].id +1;
-    const newId = (users[users.length - 1] && users[users.length - 1].id +1 )|| 1;
-                 
-    const img = req.file ? req.file.filename : " ";
-    let newImg ;
-    if(img.length > 0){
-      newImg = `/images/users/${img}`
-    }
-    const nuevoUsuario ={
-      id: newId,
-      nombre,
-      usuario,
-      email,
-      fechaNacimiento,
-      domicilio,
-      foto: newImg,
-      contraseña,
-      confirmarContraseña,
-   }
-  
-
-   users.push(nuevoUsuario)
-   const nuevosuarioJson =  JSON.stringify(users)
-   fs.writeFileSync(path.join(__dirname, "../dataBase/usuariosBase.json"), nuevosuarioJson)
+        
+        db.User.create({    
+            name: req.body.name,
+            last_name: req.body.last_name,
+            name_user: req.body.name_user,
+            email: req.body.email,
+            date_of_birth: req.body.date_of_birth,
+            home: req.body.home,       
+            password: req.body.password,
+            confirm_password: req.body.confirm_password,
+         
+        })
+      
    res.redirect("/usuarios")
    }
    
 const  editarUsuario  = function(req,res){
-  const {id} = req.params;
-  const userEdit = users.find(elem => elem.id === id)
-  res.render(path.join(__dirname, "../../views/editarUsuario.ejs"),{userEdit})
+    db.User.findByPk(req.params.id)
+          .then((userEdit)=>{
+            res.render(path.join(__dirname, "../../views/editarUsuario.ejs"),{userEdit})
+          })
+
 }
 
-
+// no actualiza a los usuarios
 const  usuarioEditado = function(req, res){
-
+   console.log(req.body);
+   db.User.update({
+      name: req.body.name,
+      last_name: req.body.last_name,
+      name_user: req.body.name_user,
+      email: req.body.email,
+      date_of_birth: req.body.date_of_birth,
+      home: req.body.home,       
+      password: req.body.password,
+      confirm_password: req.body.confirm_password,
+   },{
+      where:{id: req.params.id}
+   })
+   res.redirect("/usuarios")
+   
 }
 
 module.exports = {

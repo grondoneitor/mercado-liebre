@@ -19,72 +19,40 @@
         <%- include("partials/header.ejs")%>
     
 <main>
-    <% if(Array.isArray(producto)){%>
-        <% for(let i = 0; i < producto.length; i++ ){%>
-        <section class="container-article hola-2">
-            <article class="article">
-            <div class="container-img">
-                  <img src="<%= producto[i].img%>" alt="" class="img" name="">
-            </div> 
-            <div class="container-des"> 
-                  <!-- <i class="circulo"><i class="fa-solid fa-truck" id="auto"></i></i> -->
-                  <div class="container-precio-descuentos-descripcion">
-                      <strong class="descripciones"><%= producto[i].nombre%></strong> 
-                      <p class="precio"><%= producto[i].precio%></p>
-                      <p class="descuentos"><%= producto[i].descuento%></p> 
-                      <ul>
-                        <% for(let o = 0; o < producto[i].caracteristicas.length; o++){%>  
-                        <li class="caracteristicas"><%= producto[i].caracteristicas[o] %></li>
-                        <% } %>
-                       </ul>        
-                                 
-                  </div>
-                  <div class="container-botones">
+
+       <h1>productos</h1>
+     
+            <section class="container-article hola-2">
+                <article class="article">
+                <div class="container-img">
+                      <img src="<%= producto.product_img%>" alt="" class="img" name="">
+                </div> 
+                <div class="container-des"> 
+                      <!-- <i class="circulo"><i class="fa-solid fa-truck" id="auto"></i></i> -->
+                      <div class="container-precio-descuentos-descripcion">
+                          <strong class="nombre"><%= producto.product_name%></strong> 
+                          <p class="precio"><%= producto.precio%></p>
+                          <p class="descripcion"><%= producto.product_description%></p> 
+                          <ul>
                     
-                        <input type="submit" value="comprar" name="boton-compra">
-                        <a href="/editar-producto/<%= producto.id%>"><input type="submit" value="editar producto" name="boton-editar"></a>
-                    
-                  </div>
-                 
+                            <li class="categoria"><%= producto.product_category %></li>
                   
-            </div>
-           </article>
-       </section>
-       <% } %>
-        <% }else{ %>
-       
-               <section class="container-article hola-2">
-                    <article class="article">
-                    <div class="container-img">
-                          <img src="<%= producto.img%>" alt="" class="img">
-                    </div> 
-                    <div class="container-des"> 
-                          <!-- <i class="circulo"><i class="fa-solid fa-truck" id="auto"></i></i> -->
-                          <div class="container-precio-descuentos-descripcion">
-                              <strong class="descripciones"><%= producto.nombre%></strong> 
-                              <p class="precio"><%= producto.precio%></p>
-                              <p class="descuentos"><%= producto.descuento%></p> 
-                              <ul>
-                                <% for(let o = 0; o < producto.caracteristicas.length; o++){%>  
-                                <li class="caracteristicas"><%= producto.caracteristicas[o] %></li>
-                                <% } %>
-                               </ul>        
-                                         
-                          </div>
-                          <div class="container-botones">
-                           
-                                <input type="submit" value="comprar" name="boton-compra">
-                                
-                                <a href="/editar-producto/<%= producto.id%>"><input type="submit" value="editar producto" name="boton-editar"></a>
+                           </ul>        
+                                     
+                      </div>
+                      <div class="container-botones">
+                        
+                            <input type="submit" value="comprar" name="boton-compra">
+                            <a href="/editar-producto/<%= producto.id%>"><input type="submit" value="editar producto" name="boton-editar"></a>
+                        
+                      </div>
+                     
                       
-                          </div>
-                         
-                          
-                    </div>
-                   </article>
-               </section>
-        
-            <% } %>
+                </div>
+               </article>
+           </section>
+       
+      
         </main>           
 
 </body>

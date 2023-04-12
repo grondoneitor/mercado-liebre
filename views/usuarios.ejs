@@ -13,8 +13,8 @@
     <% for(let i = 0; i < users.length; i++ ){%>
        <a href="/usuarios/<%= users[i].id%>">
         <div class="container-usuario">
-            <h1 class="h1-usuarios"><%=users[i].nombre %></h1>
-            <h2 class="h2-usuarios"><%=users[i].usuario %></h2>
+            <h1 class="h1-usuarios"><%=users[i].name %></h1>
+            <h2 class="h2-usuarios"><%=users[i].name_user %></h2>
             <img src="<%= users[i].foto%>" class="img-usuarios" alt="" width="200" height="200">
         </div>
        </a>

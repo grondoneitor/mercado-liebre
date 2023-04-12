@@ -9,22 +9,22 @@
 <body> 
     <main class="">
         <section  id="">
-           <form action="/editar-producto?_method=PUT" method="POST" id="registro">
+           <form action="/editar-producto/<%= editarProducto.id %>" method="POST" id="registro">
                 <h1 id="titulo">Editar producto</h1>
 
                     <label  class="label" for="nombre" >Nombre del producto:</label>
-                    <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre del producto" value="<%= editarProducto.nombre %>">
+                    <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre del producto" value="<%= editarProducto.product_name %>">
 
                     <input class="input" type="text" name="id" id="id" placeholder="" value="<%= editarProducto.id %>" readonly>
 
-                    <label class="label" for="precio">Precio:</label>
-                    <input class="input" type="text" name="precio" id="precio" placeholder="precio del producto" value="<%= editarProducto.precio %>">
+                    <label class="label" for="categoria">categoria:</label>
+                    <input class="input" type="text" name="categoria" id="categoria" placeholder="precio del producto" value="<%= editarProducto.product_category %>">
                        
                      
 
 
-                    <label class="label" for="caracteristicas">Caracteristicas:</label>
-                    <input class="input" type="text-area" name="caracteristicas" id="caracteristicas" value="<%= editarProducto.caracteristicas %>">
+                    <label class="label" for="descripcion">Descripcion:</label>
+                    <input class="input" type="text-area" name="descripcion" id="descripcion" value="<%= editarProducto.product_description %>">
 
                     <input type="text" name="in-sale" readonly placeholder="producto para vender">
              

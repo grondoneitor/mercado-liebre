@@ -24,5 +24,5 @@ registerRouter.get("/usuarios", usuarios)
 registerRouter.get("/usuarios/:id", detalleUsuario)
 
 registerRouter.get("/editar-usuario/:id", editarUsuario)
-registerRouter.put("/editar-usuario", usuarioEditado)
+registerRouter.post("/editar-usuario/:id", usuarioEditado)
 module.exports =  registerRouter
